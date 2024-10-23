@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Restaurant</title>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    alert(`Thank you for contacting us, ${name}! We will respond to your message shortly.`);
+    document.getElementById("contactForm").reset();
+});
+
+    </script>
+    <style>
+
+        
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-image: url(https://img.freepik.com/premium-vector/burger-pizza-coffee-cup-vector-illustration_284825-337.jpg);
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6347;
+}
+
+.home-section {
+    background: url('restaurant-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.welcome-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 20px;
+}
+
+.btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d9534f;
+}
+
+.menu-section, .about-section, .contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.menu-items .item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-items .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.menu-items .item:hover {
+    transform: scale(1.05);
+}
+
+.about-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ff6347;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fadeIn {
+    animation: fadeIn 2s ease-in-out;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Delicious Restaurant</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="welcome-text">
+            <h2 class="fadeIn">Welcome to Suryansh Restaurant</h2>
+            <p class="fadeIn"><h3>Where Every Meal is a Celebration</h3></p>
+            <a href="#menu" class="btn fadeIn">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="item fadeIn">
+                <img src="https://i.etsystatic.com/8015299/r/il/54f9fd/2333981557/il_fullxfull.2333981557_dyv0.jpg" alt="Pasta" style="height: 300px; width: 200px;">
+                <h3>Coke</h3>
+                <p>50</p>
+            </div>
+            <div class="item fadeIn">
+                <img src="https://static.wixstatic.com/media/f1892b_9eb3c2200e344a62bcd111496947207c~mv2.png/v1/fill/w_594,h_462,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/epic-burger-chicagos-best-burger_0004_ed.png" alt="Burger">
+                <h3>Burger</h3>
+                <p>150</p>
+            </div>
+            <div class="item fadeIn">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIJeKANIfqwtJ0wRObG9sy5abc1oyNzXiQbhfdE7BjXXPhfENufbE_H1m61Gf4VGcSkko&usqp=CAU" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>200</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>At Suryansh Restaurant, we blend tradition with modern cuisine to bring you an unforgettable dining experience. Our chefs use fresh ingredients and passion to create dishes you'll love.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Suryansh Restaurant | Follow us on 
+            <a href="https://www.instagram.com/suryansh9170ak?igsh=YnZldzB6Znd4MnF4">Instagram</a>, 
+            <a href="#">Facebook</a>, 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    
+</body>
+</html>
